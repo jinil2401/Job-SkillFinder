@@ -65,4 +65,5 @@ UDEMY_CLIENT_SECRET=your_udemy_client_secret
 
 ## API Credits
 -**Adzuna API**: Used for fetching job listings. Learn more at Adzuna API(https://developer.adzuna.com/).
+
 -**Udemy API**: Used for searching and retrieving courses based on the job titles. You can learn more at Udemy API(https://www.udemy.com/developers/affiliate/).
