@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    .container
+        h1 Job and Course Listings
+        if jobs && jobs.length > 0
+            h2 Job Listings
+            each job in jobs
+                .card.mb-3
+                    .card-body
+                        h5.card-title #{job.title}
+                        if job.company
+                            p.card-text #{job.company.display_name}
+                        if job.location && job.location.display_name
+                            p.card-text Location: #{job.location.display_name}
+                        if job.refs && job.refs.landing_page
+                            a.btn.btn-primary(href=job.refs.landing_page) View Job
+        else
+            p No jobs found based on your search criteria.
+
+        if courses && courses.length > 0
+            h2 Course Suggestions
+            each course in courses
+                .card.mb-3
+                    .card-body
+                        h5.card-title #{course.title}
+                        p.card-text Price: #{course.price ? `Price: ${course.price}` : 'Free'}
+                        a.btn.btn-primary(href=course.url) View Course
+        else
+            p No courses found based on your search criteria.
