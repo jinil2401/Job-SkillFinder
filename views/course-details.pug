@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .container.mt-5
+    // Conditional rendering based on if course data is available
+    if course
+      .card
+        img.card-img-top(src=course.image_480x270 alt=`Image for ${course.title}`)
+        .card-body
+          h2 #{course.title}
+          p #{course.description}
+          ul.list-group
+            li.list-group-item Price: #{course.price || 'Free'}
+            li.list-group-item Rating: #{course.avg_rating} stars
+          a.btn.btn-primary(href=course.url target="_blank") Visit Course
+    else
+      .alert.alert-danger No course details found.

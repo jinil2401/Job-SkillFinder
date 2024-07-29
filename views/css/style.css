@@ -1,59 +1,36 @@
-/* Reset some default styling */
-body, h1, h2, h3, p {
+/* General Body and Background Styling */
+body {
+  font-family: 'Arial', sans-serif;  // Default font for the website
   margin: 0;
   padding: 0;
+  background-color: #f0f0f0;  // Light gray background color for better readability
+  color: #333333;  // Dark gray text color for contrast
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f4f4f4;
-}
-
-header, footer {
-  background-color: #004d99;
-  color: #ffffff;
-  text-align: center;
-  padding: 1em 0;
-}
-
-header nav ul {
-  list-style: none;
-}
-
-header nav ul li {
-  display: inline;
-  margin-right: 10px;
-}
-
-header nav ul li a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
+/* Container Styling */
 .container {
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
+  width: 80%;  // Container width as a percentage of screen size
+  margin: auto;  // Center the container horizontally
+  overflow: hidden;  // Prevents overflow of child elements
+  border: 1px solid #ccc;  // Light gray border around the container
+  padding: 20px;  // Padding inside the container
+  background-color: #ffffff;  // White background for the content area
 }
 
-.job, .course {
-  background: #ffffff;
-  box-shadow: 0 0 10px #ccc;
-  padding: 10px;
-  margin-top: 20px;
+/* Header Styling */
+header {
+  background: #0056b3;  // Dark blue background for the header
+  color: #ffffff;  // White text for better visibility
+  padding-top: 30px;  // Top padding for the header
+  min-height: 70px;  // Minimum height of the header
+  border-bottom: #0779e4 3px solid;  // Blue border at the bottom of the header
 }
 
-h2, h3 {
-  color: #333;
+header a {
+  color: #ffffff;  // White color for links in the header
+  text-decoration: none;  // No underline for links
+  text-transform: uppercase;  // Uppercase text for stylistic preference
+  font-size: 16px;  // Font size for links
 }
 
-a {
-  color: #004d99;
-  text-decoration: none;
-}
-
-footer p {
-  margin-top: 20px;
-}
+/* More styling can be commented similarly based on specific sections */

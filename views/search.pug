@@ -1,24 +1,14 @@
 extends layout
 
 block content
-    .container
-        h1 Search Jobs and Courses
-        form(action='/search-jobs', method='get')
-            .form-group
-                label(for='what') Job/Course Keywords:
-                input#what.form-control(type='text', name='what', placeholder='e.g., JavaScript Developer')
-
-            .form-group
-                label(for='where') Location:
-                input#where.form-control(type='text', name='where', placeholder='e.g., London')
-
-            .form-group
-                label(for='category') Category:
-                select#category.form-control(name='category')
-                    option(value='') Select Category
-                    option(value='Technology') Technology
-                    option(value='Business') Business
-                    // Add more categories as needed
-
-            button.btn.btn-primary(type='submit') Search
-
+  .container.mt-5
+    h1 Search Jobs and Courses
+    // Search form using GET method
+    form(action='/search-jobs', method='get')
+      .form-group
+        label(for='what') Job or Course Keyword
+        input.form-control(type='text', name='what', placeholder='Enter keyword')
+      .form-group
+        label(for='where') Location
+        input.form-control(type='text', name='where', placeholder='Enter location')
+      button.btn.btn-primary(type='submit') Search
